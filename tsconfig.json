@@ -6,7 +6,6 @@
     "rootDir": "./src",
     "strict": true,
     "strictPropertyInitialization": false,
-
     "baseUrl": "./src",
     "paths": {
       "@modules/*": ["modules/*"],
@@ -16,7 +15,7 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true
   }
 }
