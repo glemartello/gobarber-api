@@ -3,5 +3,6 @@ buid
 dist
 ormconfig.json
 tmp/*
+coverage
 !tmp/.gitkeep
 .env

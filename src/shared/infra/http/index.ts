@@ -1,7 +1,8 @@
 import 'reflect-metadata';
-// import dotenv from 'dotenv';
+import 'dotenv/config';
 import express, { Application, Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
+import { errors } from 'celebrate';
 
 import cors from 'cors';
 import uploadConfig from '@config/upload';
@@ -10,8 +11,6 @@ import routes from './routes';
 
 import '@shared/infra/typeorm';
 import '@shared/container';
-
-// dotenv.config();
 
 class App {
   public server: Application;
@@ -30,6 +29,7 @@ class App {
   private routes(): void {
     this.server.use('/files', express.static(uploadConfig.uploadsFolder));
     this.server.use(routes);
+    this.server.use(errors);
     this.server.use(
       (
         err: Error,
