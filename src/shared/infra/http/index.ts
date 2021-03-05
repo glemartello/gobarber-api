@@ -7,6 +7,7 @@ import { errors } from 'celebrate';
 import cors from 'cors';
 import uploadConfig from '@config/upload';
 import AppError from '@shared/errors/AppError';
+import rateLimiter from './middlewares/rateLimiter';
 import routes from './routes';
 
 import '@shared/infra/typeorm';
@@ -24,6 +25,7 @@ class App {
   private middleware(): void {
     this.server.use(express.json());
     this.server.use(cors());
+    this.server.use(rateLimiter);
   }
 
   private routes(): void {
