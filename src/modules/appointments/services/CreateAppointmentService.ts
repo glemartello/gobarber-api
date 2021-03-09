@@ -20,7 +20,7 @@ class CreateAppointmentService {
     @inject('AppointmentsRepository')
     private appointmentsRepository: IAppointmentsRepository,
 
-    @inject('AppointmentsRepository')
+    @inject('NotificationsRepository')
     private notificationsRepository: INotificationsRepository,
 
     @inject('CacheProvider')
@@ -33,7 +33,6 @@ class CreateAppointmentService {
     user_id,
   }: IRequest): Promise<Appointment> {
     const appointmentDate = startOfHour(date);
-
     if (isBefore(appointmentDate, Date.now())) {
       throw new AppError('You can not create an appointment on a past date');
     }
@@ -68,7 +67,7 @@ class CreateAppointmentService {
     });
 
     await this.cacheProvider.invalidate(
-      `provider-appointments:${provider_id}:${format(
+      `provider-appointments:${provider_id}-${format(
         appointmentDate,
         'yyyy-M-d',
       )}`,

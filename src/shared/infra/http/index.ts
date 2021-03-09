@@ -25,11 +25,11 @@ class App {
   private middleware(): void {
     this.server.use(express.json());
     this.server.use(cors());
-    this.server.use(rateLimiter);
   }
 
   private routes(): void {
     this.server.use('/files', express.static(uploadConfig.uploadsFolder));
+    this.server.use(rateLimiter);
     this.server.use(routes);
     this.server.use(errors);
     this.server.use(
