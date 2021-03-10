@@ -1,5 +1,5 @@
 node_modules
-buid
+build/
 dist
 ormconfig.json
 tmp/*
