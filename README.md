@@ -4,7 +4,7 @@
 
 <p align="center" >
   <a href="#framed_picture-preview"> 🖼️ Preview</a> |
-  <a href="#construction-preview"> 🚧 Project</a> |
+  <a href="#construction-project"> 🚧 Project</a> |
   <a href="#rocket-technologies"> 🚀 Technologies</a> |
   <a href="#zap-getting-started"> ⚡ Getting started</a>
 </p>
@@ -16,23 +16,24 @@
   </a>
 </p>
 
-
 <h2 align="center">The best haircut and beard trim of your life!</h2>
 
-## 🖼️ Preview
+
+## :framed_picture: Preview
 
 ![png1](github/signIn.png)
 ![png2](github/dashboard.png)
 
 
-## 🚧 Project
+
+## :construction: Project
 
 This is the GoBarber API, which provides everything you need to manage your own barbershop, ranging from endpoints that costumers can book an appointment to a comprehensive dashboard, so that barbers can see their schedule for day.
 
 
 [Web Client](https://github.com/pedrozocatelli/gobarber-web)
 
-## 🚀 Technologies
+## :rocket: Technologies
 
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -50,7 +51,7 @@ This is the GoBarber API, which provides everything you need to manage your own 
 - [Jest](https://jestjs.io/)
 
 
-## ⚡ Getting started
+## :zap: Getting started
 ```sh
 $ git clone git@github.com:pedrozocatelli/gobarber-api
 $ cd gobarber-api
