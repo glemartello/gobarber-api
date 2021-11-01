@@ -14,12 +14,14 @@ services:
       - pg_database
     volumes:
       - ".:/app"
+    expose:
+      - "3333"
 
   pg_database:
     image: postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: pedro
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: gobarber
     ports:
       - "5432:5432"
